@@ -14,9 +14,10 @@ spring:
   jpa:
     database: mysql
     hibernate:
-      ddl-auto: update
+      ddl-auto: update # 엔터티 수정 될 경우 create로 엔터티 생성하고 그 이후로 update로 바꿔두기
     show-sql: true   # 실행되는 SQL 쿼리를 콘솔에 출력
     properties:
       hibernate:
         format_sql: true   # SQL 쿼리의 출력 포맷을 설정
         use_sql_comments: true # SQL에 주석을 추가하도록 설정
+

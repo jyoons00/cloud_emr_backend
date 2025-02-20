@@ -23,17 +23,20 @@ public class PatientEntity {
     //환자번호
     @Id
 //    @Size(min=8, max=8, message = "환자번호는 반드시 8자리여야 합니다.")
-    @Column(name = "patient_no")
+    @Column(name = "patient_no", nullable = false, unique = true)
+
     private Long patientNo;
 
-    @Column(name = "patient_name")
+    @Column(name = "patient_name", nullable = false)
     private String patientName;
 
     //환자 주민번호
-    @Column(name = "patient_rrn")
+
+    @Column(name = "patient_rrn", nullable = false, unique = true)
     private String patientRrn;
 
-    @Column(name = "patient_gender")
+    @Column(name = "patient_gender", nullable = false)
+
     private String patientGender;
 
     @Column(name = "patient_birth")
@@ -42,21 +45,23 @@ public class PatientEntity {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date patientBirth;
 
+
+
     @Column(name = "patient_address")
     private String patientAddress;
 
-    @Column(name = "patient_email")
+    @Column(name = "patient_email", nullable = false, unique = true)
     private String patientEmail;
 
-    @Column(name = "patient_tel")
+    @Column(name = "patient_tel", nullable = false, unique = true)
     private String patientTel;
 
-    @Column(name = "patient_foreign")
+    @Column(name = "patient_foreign", nullable = false)
     @Size(min=1, max=2, message = "Y/N")
     private String patientForeign;
 
     //여권 번호
-    @Column(name = "patient_passport")
+    @Column(name = "patient_passport", unique = true)
     private String patientPassport;
 
     @Column(name = "patient_hypass_YN")

@@ -24,6 +24,7 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	// JDBC 기반 데이터베이스 액세스 모듈
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 

@@ -12,6 +12,11 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+    // 사용자 조회 메서드
+    public UserEntity findUserById(Long userId) {
+        return userRepository.findById(userId).orElse(null); // 유저가 없으면 null 반환
+    }
+
     /**   중복검증 추가 및 Javadoc 추가해드렸습니다. +최경태
      * 회원가입
      * @author : 전재윤

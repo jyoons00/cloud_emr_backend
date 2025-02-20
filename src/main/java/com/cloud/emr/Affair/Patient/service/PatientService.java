@@ -2,7 +2,6 @@ package com.cloud.emr.Affair.Patient.service;
 
 import com.cloud.emr.Affair.Patient.entity.PatientEntity;
 import com.cloud.emr.Affair.Patient.repository.PatientRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -34,4 +33,5 @@ public class PatientService {
                 .map(PatientEntity::getPatientRrn) // PatientEntity에서 rrn 값만 추출
                 .orElseThrow(() -> new IllegalArgumentException("해당 환자의 주민번호를 찾을 수 없습니다. patientNo: " + patientNo));
     }
+
 }
